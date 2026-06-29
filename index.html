@@ -42,36 +42,36 @@
 
   <script>
     const projects = [
-      { n: 1,  name: 'Weather App',             slug: '1. Weather App',                   cat: 'api'         },
-      { n: 2,  name: 'To-do List',               slug: '2. To-do List',                    cat: 'interactive' },
-      { n: 3,  name: 'Quiz App',                 slug: '3. Quiz App',                      cat: 'interactive' },
-      { n: 4,  name: 'Password Generator',       slug: '4. Random Password Generator',     cat: 'tool'        },
-      { n: 5,  name: 'Notes App',                slug: '5. Notes App',                     cat: 'tool'        },
-      { n: 6,  name: 'Age Calculator',           slug: '6. Age Calculator',                cat: 'tool'        },
-      { n: 7,  name: 'Quote Generator',          slug: '7. Quote Generator',               cat: 'api'         },
-      { n: 8,  name: 'QR Code Generator',        slug: '8. QR Code Generator',             cat: 'tool'        },
-      { n: 9,  name: 'Toast Notification',       slug: '9. Toast Notification for Website',cat: 'ui'          },
-      { n: 10, name: 'Music Player',             slug: '10. Music Player',                 cat: 'media'       },
-      { n: 11, name: 'Stopwatch',                slug: '11. Stopwatch',                    cat: 'tool'        },
-      { n: 12, name: 'Calculator',               slug: '12. Calculator',                   cat: 'tool'        },
-      { n: 13, name: 'Popup',                    slug: '13. Popup',                        cat: 'ui'          },
-      { n: 14, name: 'Password Toggle',          slug: '14. Password Toggle',              cat: 'ui'          },
-      { n: 15, name: 'Dark Mode',                slug: '15. Dark Mode',                    cat: 'ui'          },
-      { n: 16, name: 'Form Validation',          slug: '16. Form Validation',              cat: 'forms'       },
-      { n: 17, name: 'Image Gallery',            slug: '17. Image Gallery',                cat: 'media'       },
-      { n: 18, name: 'Email Subscription',       slug: '18. Email Subscription Form',      cat: 'forms'       },
-      { n: 19, name: 'Password Strength',        slug: '19. Password Strength Indicator',  cat: 'forms'       },
-      { n: 20, name: 'Text to Speech',           slug: '20. Text-to-speech Converter',     cat: 'media'       },
-      { n: 21, name: 'Coming Soon Page',         slug: '21. Website Coming Soon',          cat: 'ui'          },
-      { n: 22, name: 'Image Transition',         slug: '22. Image Transition',             cat: 'media'       },
-      { n: 23, name: 'Mini Calendar',            slug: '23. Mini Calendar',                cat: 'tool'        },
-      { n: 24, name: 'Select Menu',              slug: '24. Select Menu Design',           cat: 'ui'          },
-      { n: 25, name: 'Circular Progress Bar',    slug: '25. Circular Progress Bar',        cat: 'ui'          },
-      { n: 26, name: 'Product Page',             slug: '26. Product Page Design',          cat: 'ui'          },
-      { n: 27, name: 'Crypto Website',           slug: '27. Cryptocurrency Website',       cat: 'api'         },
-      { n: 28, name: 'Digital Clock',            slug: '28. Digital Clock',                cat: 'tool'        },
-      { n: 29, name: 'Drag and Drop',            slug: '29. Drag and Drop',                cat: 'interactive' },
-      { n: 30, name: 'Image Search Engine',      slug: '30. Image Search Engine',          cat: 'api'         },
+      { n: 1,  name: 'Weather App',          slug: '1. Weather App',                    cat: 'api',         icon: '🌤️'  },
+      { n: 2,  name: 'To-do List',           slug: '2. To-do List',                     cat: 'interactive', icon: '✅'  },
+      { n: 3,  name: 'Quiz App',             slug: '3. Quiz App',                       cat: 'interactive', icon: '🧠'  },
+      { n: 4,  name: 'Password Generator',   slug: '4. Random Password Generator',      cat: 'tool',        icon: '🔐'  },
+      { n: 5,  name: 'Notes App',            slug: '5. Notes App',                      cat: 'tool',        icon: '📝'  },
+      { n: 6,  name: 'Age Calculator',       slug: '6. Age Calculator',                 cat: 'tool',        icon: '🎂'  },
+      { n: 7,  name: 'Quote Generator',      slug: '7. Quote Generator',                cat: 'api',         icon: '💬'  },
+      { n: 8,  name: 'QR Code Generator',    slug: '8. QR Code Generator',              cat: 'tool',        icon: '📱'  },
+      { n: 9,  name: 'Toast Notification',   slug: '9. Toast Notification for Website', cat: 'ui',          icon: '🔔'  },
+      { n: 10, name: 'Music Player',         slug: '10. Music Player',                  cat: 'media',       icon: '🎵'  },
+      { n: 11, name: 'Stopwatch',            slug: '11. Stopwatch',                     cat: 'tool',        icon: '⏱️'  },
+      { n: 12, name: 'Calculator',           slug: '12. Calculator',                    cat: 'tool',        icon: '🧮'  },
+      { n: 13, name: 'Popup',               slug: '13. Popup',                         cat: 'ui',          icon: '💭'  },
+      { n: 14, name: 'Password Toggle',      slug: '14. Password Toggle',               cat: 'ui',          icon: '👁️'  },
+      { n: 15, name: 'Dark Mode',            slug: '15. Dark Mode',                     cat: 'ui',          icon: '🌙'  },
+      { n: 16, name: 'Form Validation',      slug: '16. Form Validation',               cat: 'forms',       icon: '📋'  },
+      { n: 17, name: 'Image Gallery',        slug: '17. Image Gallery',                 cat: 'media',       icon: '🖼️'  },
+      { n: 18, name: 'Email Subscription',   slug: '18. Email Subscription Form',       cat: 'forms',       icon: '📧'  },
+      { n: 19, name: 'Password Strength',    slug: '19. Password Strength Indicator',   cat: 'forms',       icon: '🔒'  },
+      { n: 20, name: 'Text to Speech',       slug: '20. Text-to-speech Converter',      cat: 'media',       icon: '🔊'  },
+      { n: 21, name: 'Coming Soon Page',     slug: '21. Website Coming Soon',           cat: 'ui',          icon: '🚀'  },
+      { n: 22, name: 'Image Transition',     slug: '22. Image Transition',              cat: 'media',       icon: '🎞️'  },
+      { n: 23, name: 'Mini Calendar',        slug: '23. Mini Calendar',                 cat: 'tool',        icon: '📅'  },
+      { n: 24, name: 'Select Menu',          slug: '24. Select Menu Design',            cat: 'ui',          icon: '🔽'  },
+      { n: 25, name: 'Circular Progress Bar',slug: '25. Circular Progress Bar',         cat: 'ui',          icon: '⭕'  },
+      { n: 26, name: 'Product Page',         slug: '26. Product Page Design',           cat: 'ui',          icon: '🛍️'  },
+      { n: 27, name: 'Crypto Website',       slug: '27. Cryptocurrency Website',        cat: 'api',         icon: '₿'   },
+      { n: 28, name: 'Digital Clock',        slug: '28. Digital Clock',                 cat: 'tool',        icon: '🕐'  },
+      { n: 29, name: 'Drag and Drop',        slug: '29. Drag and Drop',                 cat: 'interactive', icon: '🧩'  },
+      { n: 30, name: 'Image Search Engine',  slug: '30. Image Search Engine',           cat: 'api',         icon: '🔍'  },
     ];
 
     const catLabels = {
@@ -97,10 +97,12 @@
           <span class="card-number">${String(p.n).padStart(2, '0')}</span>
           <span class="card-cat cat-${p.cat}">${catLabels[p.cat]}</span>
         </div>
+        <span class="card-icon" aria-hidden="true">${p.icon}</span>
         <div class="card-bottom">
           <span class="card-name">${p.name}</span>
           <span class="card-arrow" aria-hidden="true">&#8599;</span>
         </div>
+        <span class="card-ghost" aria-hidden="true">${String(p.n).padStart(2, '0')}</span>
       </a>
     `).join('');
 
