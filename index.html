@@ -1,41 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30 Javascript Projects</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30 JavaScript Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="1. Weather App/index.html">1. Weather</a>
-    <a href="2. To-do List/index.html">2. To-Do List</a>
-    <a href="3. Quiz App/index.html">3. Quiz</a>
-    <a href="4. Random Password Generator/index.html">4. Random Password Generator</a>
-    <a href="5. Notes App/index.html">5. Notes</a>
-    <a href="6. Age Calculator/index.html">6. Age Calculator</a>
-    <a href="7. Quote Generator/index.html">7. Quote Generator</a>
-    <a href="8. QR Code Generator/index.html">8. QR Code Generator</a>
-    <a href="9. Toast Notification for Website/index.html">9. Toast Notification</a>
-    <a href="10. Music Player/index.html">10. Music Player</a>
-    <a href="11. Stopwatch/index.html">11. Stopwatch</a>
-    <a href="12. Calculator/index.html">12. Calculator</a>
-    <a href="13. Popup/index.html">13. Popup</a>
-    <a href="14. Password Toggle/index.html">14. Password Toggle</a>
-    <a href="15. Dark Mode/index.html">15. Dark Mode</a>
-    <a href="16. Form Validation/index.html">16. Form Validation</a>
-    <a href="17. Image Gallery/index.html">17. Image Gallery</a>
-    <a href="18. Email Subscription Form/index.html">18. Email Subscription Form</a>
-    <a href="19. Password Strength Indicator/index.html">19. Password Strength Indicator</a>
-    <a href="20. Text-to-Speech Converter/index.html">20. Text-to-Speech Converter</a>
-    <a href="21. Website Coming Soon/index.html">21. Website Coming Soon</a>
-    <a href="22. Image Transition/index.html">22. Image Transition</a>
-    <a href="23. Mini Calendar/index.html">23. Mini Calendar</a>
-    <a href="24. Select Menu Design/index.html">24. Select Menu Design</a>
-    <a href="25. Circular Progress Bar/index.html">25. Circular Progress Bar</a>
-    <a href="26. Product Page Design/index.html">26. Product Page Design</a>
-    <a href="27. Cryptocurrency Website/index.html">27. Cryptocurrency Website</a>
-    <a href="28. Digital Clock/index.html">28. Digital Clock</a>
-    <a href="29. Drag and Drop/index.html">29. Drag and Drop</a>
-    <a href="30. Image Search Engine/index.html">30. Image Search Engine</a>
+  <div class="container">
+
+    <header>
+      <div class="header-deco" aria-hidden="true">30</div>
+      <p class="header-eyebrow">Vanilla JavaScript</p>
+      <h1 class="header-title">Project<br><span class="accent">Gallery</span></h1>
+      <p class="header-subtitle">30 projects built from scratch. No frameworks, no libraries - just HTML, CSS, and JS.</p>
+    </header>
+
+    <nav class="filter-bar" aria-label="Filter by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="api">API</button>
+      <button class="filter-btn" data-filter="tool">Tool</button>
+      <button class="filter-btn" data-filter="ui">UI</button>
+      <button class="filter-btn" data-filter="forms">Forms</button>
+      <button class="filter-btn" data-filter="media">Media</button>
+      <button class="filter-btn" data-filter="interactive">Interactive</button>
+    </nav>
+
+    <main class="grid" id="projects-grid"></main>
+
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-text">Built with vanilla JS</span>
+        <span class="footer-count">Showing <span id="visible-count">30</span> / 30</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    const projects = [
+      { n: 1,  name: 'Weather App',             slug: '1. Weather App',                   cat: 'api'         },
+      { n: 2,  name: 'To-do List',               slug: '2. To-do List',                    cat: 'interactive' },
+      { n: 3,  name: 'Quiz App',                 slug: '3. Quiz App',                      cat: 'interactive' },
+      { n: 4,  name: 'Password Generator',       slug: '4. Random Password Generator',     cat: 'tool'        },
+      { n: 5,  name: 'Notes App',                slug: '5. Notes App',                     cat: 'tool'        },
+      { n: 6,  name: 'Age Calculator',           slug: '6. Age Calculator',                cat: 'tool'        },
+      { n: 7,  name: 'Quote Generator',          slug: '7. Quote Generator',               cat: 'api'         },
+      { n: 8,  name: 'QR Code Generator',        slug: '8. QR Code Generator',             cat: 'tool'        },
+      { n: 9,  name: 'Toast Notification',       slug: '9. Toast Notification for Website',cat: 'ui'          },
+      { n: 10, name: 'Music Player',             slug: '10. Music Player',                 cat: 'media'       },
+      { n: 11, name: 'Stopwatch',                slug: '11. Stopwatch',                    cat: 'tool'        },
+      { n: 12, name: 'Calculator',               slug: '12. Calculator',                   cat: 'tool'        },
+      { n: 13, name: 'Popup',                    slug: '13. Popup',                        cat: 'ui'          },
+      { n: 14, name: 'Password Toggle',          slug: '14. Password Toggle',              cat: 'ui'          },
+      { n: 15, name: 'Dark Mode',                slug: '15. Dark Mode',                    cat: 'ui'          },
+      { n: 16, name: 'Form Validation',          slug: '16. Form Validation',              cat: 'forms'       },
+      { n: 17, name: 'Image Gallery',            slug: '17. Image Gallery',                cat: 'media'       },
+      { n: 18, name: 'Email Subscription',       slug: '18. Email Subscription Form',      cat: 'forms'       },
+      { n: 19, name: 'Password Strength',        slug: '19. Password Strength Indicator',  cat: 'forms'       },
+      { n: 20, name: 'Text to Speech',           slug: '20. Text-to-speech Converter',     cat: 'media'       },
+      { n: 21, name: 'Coming Soon Page',         slug: '21. Website Coming Soon',          cat: 'ui'          },
+      { n: 22, name: 'Image Transition',         slug: '22. Image Transition',             cat: 'media'       },
+      { n: 23, name: 'Mini Calendar',            slug: '23. Mini Calendar',                cat: 'tool'        },
+      { n: 24, name: 'Select Menu',              slug: '24. Select Menu Design',           cat: 'ui'          },
+      { n: 25, name: 'Circular Progress Bar',    slug: '25. Circular Progress Bar',        cat: 'ui'          },
+      { n: 26, name: 'Product Page',             slug: '26. Product Page Design',          cat: 'ui'          },
+      { n: 27, name: 'Crypto Website',           slug: '27. Cryptocurrency Website',       cat: 'api'         },
+      { n: 28, name: 'Digital Clock',            slug: '28. Digital Clock',                cat: 'tool'        },
+      { n: 29, name: 'Drag and Drop',            slug: '29. Drag and Drop',                cat: 'interactive' },
+      { n: 30, name: 'Image Search Engine',      slug: '30. Image Search Engine',          cat: 'api'         },
+    ];
+
+    const catLabels = {
+      api:         'API',
+      tool:        'Tool',
+      ui:          'UI',
+      forms:       'Forms',
+      media:       'Media',
+      interactive: 'Interactive',
+    };
+
+    const grid = document.getElementById('projects-grid');
+    const countEl = document.getElementById('visible-count');
+
+    // Render all cards once
+    grid.innerHTML = projects.map((p, i) => `
+      <a href="${encodeURIComponent(p.slug)}/index.html"
+         class="card"
+         data-cat="${p.cat}"
+         style="--i:${i}"
+         aria-label="${p.name}">
+        <div class="card-top">
+          <span class="card-number">${String(p.n).padStart(2, '0')}</span>
+          <span class="card-cat cat-${p.cat}">${catLabels[p.cat]}</span>
+        </div>
+        <div class="card-bottom">
+          <span class="card-name">${p.name}</span>
+          <span class="card-arrow" aria-hidden="true">&#8599;</span>
+        </div>
+      </a>
+    `).join('');
+
+    // Filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        let visible = 0;
+        document.querySelectorAll('.card').forEach(card => {
+          const show = filter === 'all' || card.dataset.cat === filter;
+          card.classList.toggle('hidden', !show);
+          if (show) visible++;
+        });
+        countEl.textContent = visible;
+      });
+    });
+  </script>
 </body>
 </html>
