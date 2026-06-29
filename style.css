@@ -140,7 +140,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  min-height: 148px;
+  min-height: 172px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -179,7 +179,6 @@ header {
   transform: translateY(-2px);
   border-color: var(--border-hover);
   background: var(--card-hover);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(74, 222, 128, 0.08);
 }
 
 .card:hover::after {
@@ -244,6 +243,53 @@ header {
   transform: translate(0, 0);
 }
 
+/* icon */
+.card-icon {
+  font-size: 28px;
+  line-height: 1;
+  display: block;
+  margin: 8px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ghost number */
+.card-ghost {
+  position: absolute;
+  bottom: -8px;
+  right: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 90px;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0.04;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card:hover .card-ghost {
+  opacity: 0.08;
+}
+
+/* category top borders */
+.card[data-cat="api"]         { border-top: 2px solid rgba(56, 189, 248, 0.5); }
+.card[data-cat="tool"]        { border-top: 2px solid rgba(167, 139, 250, 0.5); }
+.card[data-cat="ui"]          { border-top: 2px solid rgba(251, 146, 60, 0.5); }
+.card[data-cat="forms"]       { border-top: 2px solid rgba(244, 114, 182, 0.5); }
+.card[data-cat="media"]       { border-top: 2px solid rgba(251, 191, 36, 0.5); }
+.card[data-cat="interactive"] { border-top: 2px solid rgba(74, 222, 128, 0.5); }
+
+/* category-tinted hover glows */
+.card[data-cat="api"]:hover         { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(56, 189, 248, 0.18); }
+.card[data-cat="tool"]:hover        { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(167, 139, 250, 0.18); }
+.card[data-cat="ui"]:hover          { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(251, 146, 60, 0.18); }
+.card[data-cat="forms"]:hover       { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(244, 114, 182, 0.18); }
+.card[data-cat="media"]:hover       { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(251, 191, 36, 0.18); }
+.card[data-cat="interactive"]:hover { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(74, 222, 128, 0.18); }
+
 /* ── Category color variants ── */
 .cat-api         { background: rgba(56, 189, 248, 0.12); color: #38bdf8; }
 .cat-tool        { background: rgba(167, 139, 250, 0.12); color: #a78bfa; }
@@ -306,7 +352,7 @@ footer {
   }
 
   .card {
-    min-height: 124px;
+    min-height: 148px;
     padding: 16px;
   }
 
